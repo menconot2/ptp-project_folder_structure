@@ -1,4 +1,6 @@
-<img width="630" height="512" alt="image" src="https://github.com/user-attachments/assets/b764e8da-c6ea-46ea-97d8-0f6a3edbfc79" /># 📁 PTP Project Folder Structure
+<img width="630" height="512" alt="image" src="https://github.com/user-attachments/assets/b764e8da-c6ea-46ea-97d8-0f6a3edbfc79" /># 
+
+📁 PTP Project Folder Structure
 
 Dokumentasi standar struktur folder yang digunakan dalam project produksi.
 Dibuat sebagai referensi bersama — baik untuk anggota tim baru maupun sebagai pengingat saat dibutuhkan.
