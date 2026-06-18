@@ -32,12 +32,12 @@ Template dasar yang berlaku untuk semua jenis project:
 
 ```
 📁 [YYYYMMDD]_[nama_project]/
-├── 📁 _ref/          # Referensi visual, moodboard, brief dari klien
-├── 📁 asset/         # Aset mentah: model, tekstur, audio, footage
-├── 📁 doc/           # Dokumen: proposal, contract, catatan meeting
-├── 📁 out/           # Output final yang dikirim ke klien
-├── 📁 wip/           # Work in progress — file kerja aktif
-└── 📁 arch/          # Arsip — versi lama atau file yang sudah tidak aktif
+├── 📁 00_tools/          # Referensi visual, moodboard, brief dari klien
+├── 📁 01_pre_production/         # Aset mentah: model, tekstur, audio, footage
+├── 📁 02_production/           # Dokumen: proposal, contract, catatan meeting
+├── 📁 03_post_production/           # Output final yang dikirim ke klien
+├── 📁 04_cgru/           # Work in progress — file kerja aktif
+└── 📁 05_backup/          # Arsip — versi lama atau file yang sudah tidak aktif
 ```
 
 > **Catatan penamaan folder project:** gunakan format `YYYYMMDD` di awal
@@ -52,38 +52,81 @@ Perluasan dari template umum, khusus untuk project berbasis Blender:
 
 ```
 📁 [YYYYMMDD]_[nama_project]/
-├── 📁 _ref/
-│   ├── 📁 moodboard/
-│   └── 📁 brief/
+├── 📁 00_tools/
+│   ├── 📁 00_csv/
+│   └── 📁 01_preset_script/
+│   │   ├── 📁 zeroxe-conf  # config untuk Zeroxe
+│   │   │   ├── 📁 builder  # builder untuk Zeroxe
 │
-├── 📁 asset/
-│   ├── 📁 3d/
-│   │   ├── 📁 model/       # File .blend model individual (linked library)
-│   │   ├── 📁 rig/         # File .blend karakter/objek yang sudah di-rig
-│   │   ├── 📁 material/    # File .blend material/shader library
-│   │   └── 📁 hdri/        # File HDRI untuk lighting
-│   ├── 📁 texture/
-│   │   ├── 📁 raw/         # Tekstur original dari sumber eksternal
-│   │   └── 📁 pack/        # Tekstur yang sudah diproses/dipaket
-│   ├── 📁 audio/
-│   └── 📁 footage/         # Video referensi atau footage untuk VFX
+├── 📁 01_pre_production/
+│   ├── 📁 00_script/
+│   ├── 📁 01_animatic/
+│   ├── 📁 02_audio/
+│   ├── 📁 03_storyboard/
+│   └── 📁 04_RND/        
+
+├── 📁 02_production/
+│   ├── 📁 01_asset/
+│   │   ├── 📁 00_library_asset/    # Berisi file .blend yang bisa di reuse untuk tim asset
+│   │   ├── 📁 01_char/             # Berisi file .blend character
+│   │   │   └── 📁 c-[nama_character]/  
+│   │   ├── 📁 02_prop/             # Berisi file .blend prop
+│   │   │   └── 📁 p-[nama_prop]/
+│   │   ├── 📁 03_set/              # Berisi file .blend set
+│   │   │   └── 📁 s-[nama_set]/
+│   │   ├── 📁 04_vehicle/          # Berisi file .blend vehicle
+│   │   │   └── 📁 v-[nama_vehicle]/
+│   │   └── 📁 05_matte/            # Berisi file image untuk lighting dan background
+│   │   │   ├── 📁 mattepainting
+│   │   │   └── 📁 skydome
+│   ├── 📁 02_layout/ #/var/mnt/I/20260222_melangkah_dari_timur/02_production/02_layout/ep000/ep000_sq01/
+│   │   ├── 📁 ep101/
+│   │   │   ├── 📁 ep101_sq01
+│   │   │   │   ├── 📁 ep101_sq01_sh0010
+│   │   │   │   │   │   └── 📁 progress
+│   │   │   └── 📁 ep..._sq..sh....
+│   │   └── 📁 ep.../       
+│   ├── 📁 03_blocking/
+│   │   ├── 📁 ep101/
+│   │   │   ├── 📁 ep101_sq01
+│   │   │   │   ├── 📁 ep101_sq01_sh0010
+│   │   │   │   │   │   └── 📁 progress
+│   │   │   └── 📁 ep..._sq..
+│   │   │   │   ├── 📁 ep..._sq.._sh....
+│   │   │   │   │   │   └── 📁 progress
+│   │   └── 📁 ep.../
+│   └── 📁 04_animation/         
+│   │   ├── 📁 ep101/         
+│   │   └── 📁 ep.../
 │
-├── 📁 scene/               # File .blend scene utama (menggunakan linked library)
-│   ├── 📁 layout/
-│   ├── 📁 anim/
-│   └── 📁 render/          # File .blend setup render final
+├── 📁 03_post_production/ 
+│   ├── 📁 01_lighting/
+│   │   ├── 📁 00_preset_lighting/
+│   │   ├── 📁 ep101/         
+│   │   └── 📁 ep.../
+│   ├── 📁 02_compositing/
+│   │   ├── 📁 00_preset_comp/
+│   │   ├── 📁 ep101/         
+│   │   └── 📁 ep.../
+│   ├── 📁 03_vfx/
+│   │   ├── 📁 00_library_vfx/
+│   │   ├── 📁 ep101/
+│   │   └── 📁 ep.../
+│   └── 📁 04_editing/
+│   │   ├── 📁 00_sound_library/
+│   │   │   ├── 📁 amb/              # Berisi file audio ambient sound
+│   │   │   ├── 📁 music/            # Berisi file audio music
+│   │   │   ├── 📁 sfx/              # Berisi file audio sfx
+│   │   │   └── 📁 vo/               # Berisi file audio untuk VO
+│   │   ├── 📁 01_title/
+│   │   ├── 📁 02_credit_title/
+│   │   ├── 📁 03_subtitle/
+│   │   ├── 📁 04_projects/
+│   │   │   ├── 📁 ep101/
+│   │   │   └── 📁 ep.../
+│   │   └── 📁 05_exports/
 │
-├── 📁 render/              # Output render mentah (EXR, PNG sequences)
-│   ├── 📁 beauty/
-│   └── 📁 pass/            # Render passes (shadow, AO, dll.)
-│
-├── 📁 comp/                # File compositing (Blender, Nuke, After Effects, dll.)
-│
-├── 📁 out/                 # Output final — file yang dikirim ke klien
-│
-├── 📁 doc/
-│
-└── 📁 arch/
+└── 📁 04_cgru/
 ```
 
 ---
@@ -104,20 +147,23 @@ Contoh:
 
 ### Prefix yang Digunakan
 
-| Prefix | Kategori       |
-|--------|----------------|
-| `chr_` | Character      |
-| `prp_` | Prop           |
-| `env_` | Environment    |
-| `veh_` | Vehicle        |
-| `sc_`  | Scene          |
-| `mat_` | Material       |
-| `rig_` | Rig            |
+| Prefix | Kategori               |
+|--------|------------------------|
+| `c-`   | Character              |
+| `p-`   | Prop                   |
+| `s-`   | Environment            |
+| `v-`   | Vehicle                |
+| `lay`  | Layout                 |
+| `blk`  | Blocking               |
+| `anm`  | Animation              |
+| `lgt`  | Lighting               |
+| `comp` | Compositing            |
+| `LIT`  | Mastershot Lighting    |
+| `COMP` | Mastershot Compositing |
 
 ### Versi
 
-- Gunakan format `v001`, `v002`, dst.
-- Jangan hapus versi lama — pindahkan ke folder `arch/`
+- Gunakan versioning dengan 3 digit `v001`, `v002`, dst.
 
 ---
 
