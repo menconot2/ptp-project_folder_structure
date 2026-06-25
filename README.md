@@ -69,17 +69,17 @@ Perluasan dari template umum, khusus untuk project berbasis Blender:
 
 ├── 📁 02_production/
 │   ├── 📁 01_asset/
-│   │   ├── 📁 00_library_asset/    # Berisi file .blend yang bisa di reuse untuk tim asset
-│   │   ├── 📁 01_char/             # Berisi file .blend character
+│   │   ├── 📁 00_library_asset/        # Berisi file .blend yang bisa di reuse untuk tim asset
+│   │   ├── 📁 01_char/                 # Berisi file .blend character
 │   │   │   └── 📁 c-[nama_character]/  
-│   │   ├── 📁 02_prop/             # Berisi file .blend prop
+│   │   ├── 📁 02_prop/                 # Berisi file .blend prop
 │   │   │   └── 📁 p-[nama_prop]/
-│   │   ├── 📁 03_set/              # Berisi file .blend set
+│   │   ├── 📁 03_set/                  # Berisi file .blend set
 │   │   │   └── 📁 s-[nama_set]/
-│   │   ├── 📁 04_vehicle/          # Berisi file .blend vehicle
+│   │   ├── 📁 04_vehicle/              # Berisi file .blend vehicle
 │   │   │   └── 📁 v-[nama_vehicle]/
-│   │   └── 📁 05_matte/            # Berisi file image untuk lighting dan background
-│   │   │   ├── 📁 mattepainting
+│   │   └── 📁 05_matte/                # Berisi file image untuk lighting dan background
+│   │   │   ├── 📁 mattepainting    
 │   │   │   └── 📁 skydome
 │   ├── 📁 02_layout/
 │   │   ├── 📁 ep101/
@@ -144,6 +144,7 @@ Contoh struktur dan penamaan file blender pada folder shot berlaku untuk layout,
 ```
 untuk type shot lain tinggal mengganti bagian "_`lay`_" menjadi "`blk`, `anm`, `lgt` dan `comp`"
 
+
 ### Struktur dalam folder untuk Asset dan penamaan filenya
 
 Contoh struktur dan penamaan file blender pada folder Asset:
@@ -207,16 +208,13 @@ Contoh:
 
 ### Kode yang Digunakan
 
-|--------------------------------|
 | Kode  | Type Asset             |
 |-------|------------------------|
 | `c-`  | Character              |
 | `p-`  | Prop                   |
 | `s-`  | Environment            |
 | `v-`  | Vehicle                |
-|--------------------------------|
 
-|----------------------------------|
 | Kode    | Type Shot              |
 |---------|------------------------|
 | `lay`   | Layout                 |
@@ -226,7 +224,6 @@ Contoh:
 | `comp`  | Compositing            |
 | `LIT`   | Mastershot Lighting    |
 | `COMP`  | Mastershot Compositing |
-|----------------------------------|
 
 ### Versi
 
