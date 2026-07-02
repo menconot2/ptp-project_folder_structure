@@ -187,8 +187,8 @@ agar tidak terjadi error yang di inginkan atau mengganggu alur pipeline divisi l
 ### Format nama Asset
 
 ```
-[kode_type_asset]_[nama_asset].[ekstensi]          # Untuk asset main
-[kode_type_asset]_[nama_asset]_[versi].[ekstensi]  # Untuk asset progress
+[kode_type_asset]_[nama_asset].[ekstensi]              # Untuk asset main
+[kode_type_asset]_[nama_asset]_[v + versi].[ekstensi]  # Untuk asset progress
 ```
 
 Contoh:
@@ -199,8 +199,8 @@ Contoh:
 ### Format nama Shot
 
 ```
-[judul_project]_[ep]_[sq]_[sh]_[kode_type_shot].[ekstensi]            # Untuk shot main
-[judul_project]_[ep]_[sq]_[sh]_[kode_type_shot]_[versi].[ekstensi]    # Untuk shot progress
+[judul_project]_[ep]_[sq]_[sh]_[kode_type_shot].[ekstensi]                # Untuk shot main
+[judul_project]_[ep]_[sq]_[sh]_[kode_type_shot]_[v + versi].[ekstensi]    # Untuk shot progress
 ```
 Contoh:
 - `jgt_ep101_sq01_sh0010_lay_v003.blend` — layout
